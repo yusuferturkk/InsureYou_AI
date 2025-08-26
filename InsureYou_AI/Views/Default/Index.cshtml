@@ -1,0 +1,254 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+    @await Component.InvokeAsync("_DefaultHeadComponentPartial")
+
+<body>
+    <header class="header-area header-three">
+
+        @await Component.InvokeAsync("_DefaultHeaderComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultHeaderContactComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultNavbarComponentPartial")
+
+    </header>
+
+    @await Component.InvokeAsync("_DefaultMobileMenuComponentPartial")
+
+    <main>
+        
+        @await Component.InvokeAsync("_DefaultSliderComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultAboutComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultInsureServiceComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultTrailerVideoComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultServiceComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultCounterComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultSkillComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultPricingPlanComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultTestimonialComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultGalleryComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultLastThreeArticleComponentPartial")
+        
+        <!-- contact-area -->
+        <section id="contact" class="contact-area after-none contact-bg pb-120 p-relative fix">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-12 order-1">
+                        <img src="img/bg/contact-img.png" alt="img" data-aos="fade-right" data-aos-duration="1000">
+                    </div>
+                    <div class="col-lg-6 col-md-12 order-2">
+                        <div class="section-title p-relative pr-60 mb-30">
+                            <h2 data-aos="fade-up" data-aos-duration="1000">
+                                Get Insurance Quote With Us
+                            </h2>
+                            <ul class="nav nav-tabs" data-aos="fade-up" data-aos-duration="1400">
+                                <li>
+                                    <span class="active" id="home-tab" data-bs-toggle="tab" data-bs-target="#voverview">Travel Insurance</span>
+                                </li>
+                                <li>
+                                    <span id="profile-tab" data-bs-toggle="tab" data-bs-target="#degre">Home Insurance   </span>
+                                </li>
+                                <li>
+                                    <span id="contact-tab" data-bs-toggle="tab" data-bs-target="#vgallery" aria-controls="vgallery">Life Insurance</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="tab-content" id="myTabContent" data-aos="fade-up" data-aos-duration="1600">
+                            <div class="tab-pane fade show active" id="voverview" role="tabpanel">
+                                <div class="contact-bg">
+                                    <form action="mail.php" method="post" class="contact-form">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-name mb-20">
+                                                    <input type="text" id="firstn" name="firstn" placeholder="First Name" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-subject mb-20">
+                                                    <input type="text" id="email" name="email" placeholder="info" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-name mb-20">
+                                                    <input type="text" id="phone" name="phone" placeholder="Phone No." required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-subject mb-20">
+                                                    <input type="text" id="tp" name="email" placeholder="Total Person" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-name mb-20">
+                                                    <input type="text" id="des" name="destination" placeholder="Destination" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-subject mb-20">
+                                                    <input type="text" id="sty" name="stay" placeholder="Days To Stay" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="slider-btn mt-20">
+                                                    <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Submit Request</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="degre" role="tabpanel">
+                                <div class="contact-bg">
+                                    <form action="mail.php" method="post" class="contact-form">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-name mb-20">
+                                                    <input type="text" id="firstn2" name="firstn" placeholder="First Name" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-subject mb-20">
+                                                    <input type="text" id="email4" name="email" placeholder="info" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-name mb-20">
+                                                    <input type="text" id="phone2" name="phone" placeholder="Phone No." required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-subject mb-20">
+                                                    <input type="text" id="tp2" name="email" placeholder="Total Person" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-name mb-20">
+                                                    <input type="text" id="des2" name="destination" placeholder="Destination" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-subject mb-20">
+                                                    <input type="text" id="sty2" name="stay" placeholder="Days To Stay" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="slider-btn mt-20">
+                                                    <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Submit Request</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="vgallery" role="tabpanel">
+                                <div class="contact-bg">
+                                    <form action="mail.php" method="post" class="contact-form">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-name mb-20">
+                                                    <input type="text" id="firstn3" name="firstn" placeholder="First Name" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-subject mb-20">
+                                                    <input type="text" id="email3" name="email" placeholder="info" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-name mb-20">
+                                                    <input type="text" id="phone3" name="phone" placeholder="Phone No." required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-subject mb-20">
+                                                    <input type="text" id="tp3" name="email" placeholder="Total Person" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-name mb-20">
+                                                    <input type="text" id="des3" name="destination" placeholder="Destination" required>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6">
+                                                <div class="contact-field p-relative c-subject mb-20">
+                                                    <input type="text" id="sty3" name="stay" placeholder="Days To Stay" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="slider-btn mt-20">
+                                                    <button class="btn ss-btn" data-animation="fadeInRight" data-delay=".8s">Submit Request</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- contact-area-end -->
+        <!-- newslater-area -->
+        <section class="newslater-area" data-aos="fade-up" data-aos-duration="1000">
+            <div class="container" style="background-image: url(img/bg/newslater-bg.png); background-repeat: no-repeat; background-size: cover;">
+                <div class="row">
+
+                    <div class="col-xl-12 col-lg-12 col-md-12">
+                        <div class="section-title mb-25 text-center">
+                            <h2>Subscribe To Newsletter</h2>
+                            <p>Since 2007 we have been a visionary and a reliable insurance partner for world-class insurance.</p>
+                        </div>
+                        <form name="ajax-form" id="contact-form4" action="#" method="post" class="contact-form newslater">
+                            <div class="form-group">
+                                <input class="form-control" id="email2" name="email" type="email" placeholder="Email Address..." value="" required="">
+                                <button type="submit" class="btn btn-custom" id="send2">Subscribe Now</button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- newslater-aread-end -->
+
+    </main>
+
+    @await Component.InvokeAsync("_DefaultFooterComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultScriptComponentPartial")
+
+</body>
+</html>

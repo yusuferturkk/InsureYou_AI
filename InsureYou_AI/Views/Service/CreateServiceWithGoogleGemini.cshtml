@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "CreateServiceWithGoogleGemini";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    var services = ViewBag.value;
+}
+
+<div class="container-mt-5">
+    <h2>Google Gemini ile Oluşturulan Hizmetler</h2>
+    <ul class="list-group mt-3">
+        @if (services != null)
+        {
+            foreach (var item in services)
+            {
+                <li class="list-group-item">@item</li>
+            }
+        }
+        else
+        {
+            <li class="list-group-item text-danger">Google Gemini'den Veri Alınamadı: @ViewBag.value</li>
+        }
+    </ul>
+</div>
