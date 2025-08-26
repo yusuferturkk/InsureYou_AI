@@ -22,7 +22,7 @@ namespace InsureYou_AI.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("InsureYouAI.Entities.About", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.About", b =>
                 {
                     b.Property<int>("AboutId")
                         .ValueGeneratedOnAdd()
@@ -47,7 +47,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("Abouts");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.AboutItem", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.AboutItem", b =>
                 {
                     b.Property<int>("AboutItemId")
                         .ValueGeneratedOnAdd()
@@ -64,7 +64,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("AboutItems");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.AppUser", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.AppUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -145,7 +145,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Article", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Article", b =>
                 {
                     b.Property<int>("ArticleId")
                         .ValueGeneratedOnAdd()
@@ -187,7 +187,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("Articles");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Category", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Category", b =>
                 {
                     b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
@@ -204,7 +204,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Comment", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Comment", b =>
                 {
                     b.Property<int>("CommentId")
                         .ValueGeneratedOnAdd()
@@ -235,7 +235,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Contact", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Contact", b =>
                 {
                     b.Property<int>("ContactId")
                         .ValueGeneratedOnAdd()
@@ -264,7 +264,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("Contacts");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Gallery", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Gallery", b =>
                 {
                     b.Property<int>("GalleryId")
                         .ValueGeneratedOnAdd()
@@ -285,7 +285,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("Galleries");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Message", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Message", b =>
                 {
                     b.Property<int>("MessageId")
                         .ValueGeneratedOnAdd()
@@ -308,10 +308,6 @@ namespace InsureYou_AI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("SendDate")
                         .HasColumnType("datetime2");
 
@@ -324,7 +320,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("Messages");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.PricingPlan", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.PricingPlan", b =>
                 {
                     b.Property<int>("PricingPlanId")
                         .ValueGeneratedOnAdd()
@@ -347,7 +343,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("PricingPlans");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.PricingPlanItem", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.PricingPlanItem", b =>
                 {
                     b.Property<int>("PricingPlanItemId")
                         .ValueGeneratedOnAdd()
@@ -369,7 +365,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("PricingPlanItems");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Service", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Service", b =>
                 {
                     b.Property<int>("ServiceId")
                         .ValueGeneratedOnAdd()
@@ -398,7 +394,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("Services");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Slider", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Slider", b =>
                 {
                     b.Property<int>("SliderId")
                         .ValueGeneratedOnAdd()
@@ -423,7 +419,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("Sliders");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Testimonial", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Testimonial", b =>
                 {
                     b.Property<int>("TestimonialId")
                         .ValueGeneratedOnAdd()
@@ -452,7 +448,7 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("Testimonials");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.TrailerVideo", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.TrailerVideo", b =>
                 {
                     b.Property<int>("TrailerVideoId")
                         .ValueGeneratedOnAdd()
@@ -610,13 +606,13 @@ namespace InsureYou_AI.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Article", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Article", b =>
                 {
-                    b.HasOne("InsureYouAI.Entities.AppUser", "AppUser")
+                    b.HasOne("InsureYou_AI.Entities.AppUser", "AppUser")
                         .WithMany()
                         .HasForeignKey("AppUserId");
 
-                    b.HasOne("InsureYouAI.Entities.Category", "Category")
+                    b.HasOne("InsureYou_AI.Entities.Category", "Category")
                         .WithMany("Articles")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -627,15 +623,15 @@ namespace InsureYou_AI.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Comment", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Comment", b =>
                 {
-                    b.HasOne("InsureYouAI.Entities.AppUser", "AppUser")
+                    b.HasOne("InsureYou_AI.Entities.AppUser", "AppUser")
                         .WithMany("Comments")
                         .HasForeignKey("AppUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("InsureYouAI.Entities.Article", "Article")
+                    b.HasOne("InsureYou_AI.Entities.Article", "Article")
                         .WithMany("Comments")
                         .HasForeignKey("ArticleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -646,9 +642,9 @@ namespace InsureYou_AI.Migrations
                     b.Navigation("Article");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.PricingPlanItem", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.PricingPlanItem", b =>
                 {
-                    b.HasOne("InsureYouAI.Entities.PricingPlan", "PricingPlan")
+                    b.HasOne("InsureYou_AI.Entities.PricingPlan", "PricingPlan")
                         .WithMany("PricingPlanItems")
                         .HasForeignKey("PricingPlanId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -668,7 +664,7 @@ namespace InsureYou_AI.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("InsureYouAI.Entities.AppUser", null)
+                    b.HasOne("InsureYou_AI.Entities.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -677,7 +673,7 @@ namespace InsureYou_AI.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("InsureYouAI.Entities.AppUser", null)
+                    b.HasOne("InsureYou_AI.Entities.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -692,7 +688,7 @@ namespace InsureYou_AI.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("InsureYouAI.Entities.AppUser", null)
+                    b.HasOne("InsureYou_AI.Entities.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -701,29 +697,29 @@ namespace InsureYou_AI.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("InsureYouAI.Entities.AppUser", null)
+                    b.HasOne("InsureYou_AI.Entities.AppUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.AppUser", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.AppUser", b =>
                 {
                     b.Navigation("Comments");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Article", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Article", b =>
                 {
                     b.Navigation("Comments");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.Category", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.Category", b =>
                 {
                     b.Navigation("Articles");
                 });
 
-            modelBuilder.Entity("InsureYouAI.Entities.PricingPlan", b =>
+            modelBuilder.Entity("InsureYou_AI.Entities.PricingPlan", b =>
                 {
                     b.Navigation("PricingPlanItems");
                 });
