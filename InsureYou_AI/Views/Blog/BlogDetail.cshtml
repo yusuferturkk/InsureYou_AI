@@ -1,0 +1,72 @@
+﻿@{
+    Layout = null;
+}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+@await Component.InvokeAsync("_DefaultHeadComponentPartial")
+
+<body>
+    <header class="header-area header-three">
+
+        @await Component.InvokeAsync("_DefaultHeaderComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultHeaderContactComponentPartial")
+
+        @await Component.InvokeAsync("_DefaultNavbarComponentPartial")
+
+    </header>
+
+    @await Component.InvokeAsync("_DefaultMobileMenuComponentPartial")
+
+    <main>
+
+        @await Component.InvokeAsync("_BlogListBreadCrumbComponentPartial")
+
+        <section class="inner-blog b-details-p pt-120 pb-120">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="blog-details-wrap">
+
+                            @await Component.InvokeAsync("_BlogDetailContentComponentPartial", new { id = ViewBag.articleId })
+
+                            @await Component.InvokeAsync("_BlogDetailNextAndPrevPostComponentPartial")
+
+                            @await Component.InvokeAsync("_BlogDetailAuthorAboutComponentPartial")
+
+                            @await Component.InvokeAsync("_BlogDetailCommentListComponentPartial", new { id = ViewBag.articleId })
+
+                            @await Html.PartialAsync("~/Views/Blog/AddComment.cshtml")
+
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-12 col-lg-4">
+                        <aside class="sidebar-widget">
+                            @await Component.InvokeAsync("_BlogListSearchComponentPartial")
+
+                            @await Component.InvokeAsync("_BlogListSocialMediaComponentPartial")
+
+                            @await Component.InvokeAsync("_BlogListCategoriesComponentPartial")
+
+                            @await Component.InvokeAsync("_BlogListLastThreeBlogComponentPartial")
+
+                            @await Component.InvokeAsync("_BlogListTagCloudComponentPartial")
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @await Html.PartialAsync("~/Views/Default/SubscribeEmail.cshtml")
+
+    </main>
+
+    @await Component.InvokeAsync("_DefaultFooterComponentPartial")
+
+    @await Component.InvokeAsync("_DefaultScriptComponentPartial")
+
+</body>
+</html>

@@ -226,6 +226,9 @@ namespace InsureYou_AI.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("CommentId");
 
                     b.HasIndex("AppUserId");
@@ -417,6 +420,23 @@ namespace InsureYou_AI.Migrations
                     b.HasKey("SliderId");
 
                     b.ToTable("Sliders");
+                });
+
+            modelBuilder.Entity("InsureYou_AI.Entities.Subscribe", b =>
+                {
+                    b.Property<int>("SubscribeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SubscribeId"));
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("SubscribeId");
+
+                    b.ToTable("Subscribes");
                 });
 
             modelBuilder.Entity("InsureYou_AI.Entities.Testimonial", b =>

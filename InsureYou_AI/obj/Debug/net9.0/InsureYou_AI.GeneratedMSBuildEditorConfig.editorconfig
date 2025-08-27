@@ -80,6 +80,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxVcGRhdGVBcnRpY2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Blog/AddComment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xBZGRDb21tZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Blog/BlogDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Blog/BlogList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xCbG9nTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Category/CategoryList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ2F0ZWdvcnlMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -90,6 +102,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Category/UpdateCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVXBkYXRlQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Comment/CommentList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxDb21tZW50TGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Contact/ContactList.cshtml]
@@ -122,6 +138,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/ImageAI/CreateImageWithOpenAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VBSVxDcmVhdGVJbWFnZVdpdGhPcGVuQUkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Message/CreateMessage.cshtml]
@@ -198,6 +218,50 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_AdminSwitcherComponentPartial/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0FkbWluU3dpdGNoZXJDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_BlogDetailAuthorAboutComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dEZXRhaWxBdXRob3JBYm91dENvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_BlogDetailCommentListComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dEZXRhaWxDb21tZW50TGlzdENvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_BlogDetailContentComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dEZXRhaWxDb250ZW50Q29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_BlogDetailNextAndPrevPostComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dEZXRhaWxOZXh0QW5kUHJldlBvc3RDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_BlogListAllBlogComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dMaXN0QWxsQmxvZ0NvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_BlogListBreadCrumbComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dMaXN0QnJlYWRDcnVtYkNvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_BlogListCategoriesComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dMaXN0Q2F0ZWdvcmllc0NvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_BlogListLastThreeBlogComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dMaXN0TGFzdFRocmVlQmxvZ0NvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_BlogListSearchComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dMaXN0U2VhcmNoQ29tcG9uZW50UGFydGlhbFxEZWZhdWx0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_BlogListSocialMediaComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dMaXN0U29jaWFsTWVkaWFDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_BlogListTagCloudComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0Jsb2dMaXN0VGFnQ2xvdWRDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Shared/Components/_DefaultAboutComponentPartial/Default.cshtml]

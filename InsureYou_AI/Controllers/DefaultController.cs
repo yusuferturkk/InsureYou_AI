@@ -35,9 +35,18 @@ namespace InsureYou_AI.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpGet]
         public PartialViewResult SubscribeEmail()
         {
             return PartialView();
+        }
+
+        [HttpPost]
+        public IActionResult SubscribeEmail(Subscribe subscribe)
+        {
+            _context.Subscribes.Add(subscribe);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

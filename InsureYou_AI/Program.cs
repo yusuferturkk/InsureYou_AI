@@ -7,6 +7,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddHttpClient("openai", c =>
+{
+    c.BaseAddress = new Uri("https://api.openai.com/");
+});
+
 builder.Services.AddDbContext<InsureContext>();
 builder.Services.AddIdentity<AppUser, IdentityRole>()
     .AddEntityFrameworkStores<InsureContext>()
