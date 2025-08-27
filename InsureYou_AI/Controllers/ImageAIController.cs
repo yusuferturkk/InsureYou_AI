@@ -65,7 +65,7 @@ namespace InsureYou_AI.Controllers
             var model = "gemini-1.5-pro";
             var url = $"https://generativelanguage.googleapis.com/v1/models/{model}:generateImage?key={apiKey}";
 
-            using var client = new HttpClient();
+            var client = _httpClientFactory.CreateClient("gemini");
 
             // JSON payload burada
             var requestBody = new
