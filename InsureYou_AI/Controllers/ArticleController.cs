@@ -2,6 +2,8 @@
 using InsureYou_AI.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
+using System.Text;
+using System.Text.Json;
 
 namespace InsureYou_AI.Controllers
 {
@@ -96,6 +98,68 @@ namespace InsureYou_AI.Controllers
             }
             return View();
         }
+
+        [HttpGet]
+        public IActionResult CreateArticleWithGeminiAI()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateArticleWithGeminiAI(string prompt)
+        {
+            var apiKey = ""; // <- API Key Girişi
+            var model = "gemini-1.5-pro";
+            var url = $"https://generativelanguage.googleapis.com/v1/models/{model}:generateContent?key={apiKey}";
+
+            using var client = new HttpClient();
+
+            // Gemini için request formatı
+            var requestData = new
+            {
+                contents = new[]
+                {
+            new
+            {
+                role = "user",
+                parts = new[]
+                {
+                    new
+                    {
+                        text = "Sen bir sigorta şirketi için çalışan, içerik yazarlığı yapan bir yapay zekasın. " +
+                               "Kullanıcının verdiği özet ve anahtar kelimelere göre, sigortacılık sektörüyle ilgili makale üret. " +
+                               "En az 3000 karakter olsun.\n\n" +
+                               "Kullanıcının girdisi: " + prompt
+                    }
+                }
+            }
+        }
+            };
+
+            var content = new StringContent(JsonSerializer.Serialize(requestData), Encoding.UTF8, "application/json");
+            var response = await client.PostAsync(url, content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var responseJson = await response.Content.ReadAsStringAsync();
+                using var jsonDoc = JsonDocument.Parse(responseJson);
+
+                var fullText = jsonDoc.RootElement
+                                     .GetProperty("candidates")[0]
+                                     .GetProperty("content")
+                                     .GetProperty("parts")[0]
+                                     .GetProperty("text")
+                                     .GetString();
+
+                ViewBag.article = fullText;
+            }
+            else
+            {
+                ViewBag.article = "Bir hata oluştu: " + response.StatusCode + " - " + await response.Content.ReadAsStringAsync();
+            }
+            return View();
+        }
+
 
         public class OpenAIResponse
         {

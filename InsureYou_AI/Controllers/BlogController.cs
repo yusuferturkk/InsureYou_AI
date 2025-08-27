@@ -109,5 +109,89 @@ namespace InsureYou_AI.Controllers
             _context.SaveChanges();
             return RedirectToAction("BlogList");
         }
+
+        [HttpGet]
+        public PartialViewResult AddCommentGeminiAI()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddCommentGeminiAI(Comment comment)
+        {
+            comment.CreatedDate = DateTime.Now;
+            comment.AppUserId = "42e42e52-b6d2-4e84-a284-872b3badf749";
+
+            try
+            {
+                var apiKey = ""; // <- Google Gemini API Key
+                var model = "gemini-1.5-pro";
+                var url = $"https://generativelanguage.googleapis.com/v1/models/{model}:generateContent?key={apiKey}";
+
+                using var client = new HttpClient();
+
+                // Gemini için prompt: toksik mi değil mi kontrolü
+                var requestBody = new
+                {
+                    contents = new[]
+                    {
+                new
+                {
+                    role = "user",
+                    parts = new[]
+                    {
+                        new
+                        {
+                            text = $"Bu yorumu incele: \"{comment.Detail}\".\n" +
+                                   "Eğer toksik, saldırgan veya hakaret içeriyorsa 'Toksik Yorum' yaz. " +
+                                   "Eğer güvenli ve uygun bir yorumsa 'Yorum Onaylandı' yaz. " +
+                                   "Sadece bu iki ifadeden birini döndür."
+                        }
+                    }
+                }
+            }
+                };
+
+                var content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(url, content);
+                var responseJson = await response.Content.ReadAsStringAsync();
+
+                if (response.IsSuccessStatusCode)
+                {
+                    using var jsonDoc = JsonDocument.Parse(responseJson);
+                    var resultText = jsonDoc.RootElement
+                                            .GetProperty("candidates")[0]
+                                            .GetProperty("content")
+                                            .GetProperty("parts")[0]
+                                            .GetProperty("text")
+                                            .GetString();
+
+                    // Gemini’den gelen cevabı kontrol et
+                    if (!string.IsNullOrEmpty(resultText))
+                    {
+                        if (resultText.Contains("Toksik", StringComparison.OrdinalIgnoreCase))
+                            comment.Status = "Toksik Yorum";
+                        else
+                            comment.Status = "Yorum Onaylandı";
+                    }
+                    else
+                    {
+                        comment.Status = "Onay Bekliyor";
+                    }
+                }
+                else
+                {
+                    comment.Status = "Onay Bekliyor";
+                }
+            }
+            catch (Exception)
+            {
+                comment.Status = "Onay Bekliyor";
+            }
+
+            _context.Comments.Add(comment);
+            _context.SaveChanges();
+            return RedirectToAction("BlogList");
+        }
     }
 }

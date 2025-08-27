@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "CreateTestimonialsWithGemini";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    var testimonials = ViewBag.testimonials;
+}
+
+<div class="container-mt-5" style="height:750px;">
+    <h2>Gemini ile Oluşturulan Hizmetler</h2>
+    <ul class="list-group mt-3">
+        @if (testimonials != null)
+        {
+            foreach (var item in testimonials)
+            {
+                <li class="list-group-item">@item</li>
+            }
+        }
+        else
+        {
+            <li class="list-group-item text-danger">Gemini'den Veri Alınamadı: @ViewBag.testimonials</li>
+        }
+    </ul>
+</div>

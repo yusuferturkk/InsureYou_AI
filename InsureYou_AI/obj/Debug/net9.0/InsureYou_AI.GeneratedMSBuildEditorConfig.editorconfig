@@ -92,6 +92,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxDcmVhdGVBcnRpY2xlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Article/CreateArticleWithGeminiAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxDcmVhdGVBcnRpY2xlV2l0aEdlbWluaUFJLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Article/CreateArticleWithOpenAI.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxDcmVhdGVBcnRpY2xlV2l0aE9wZW5BSS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -102,6 +106,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Blog/AddComment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xBZGRDb21tZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Blog/AddCommentGeminiAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xBZGRDb21tZW50R2VtaW5pQUkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Blog/BlogDetail.cshtml]
@@ -162,6 +170,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/ImageAI/CreateImageWithGemini.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW1hZ2VBSVxDcmVhdGVJbWFnZVdpdGhHZW1pbmkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/ImageAI/CreateImageWithOpenAI.cshtml]
@@ -386,6 +398,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Testimonial/CreateTestimonial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxcQ3JlYXRlVGVzdGltb25pYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Testimonial/CreateTestimonialsWithGemini.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVzdGltb25pYWxcQ3JlYXRlVGVzdGltb25pYWxzV2l0aEdlbWluaS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Testimonial/CreateTestimonialWithClaudeAI.cshtml]

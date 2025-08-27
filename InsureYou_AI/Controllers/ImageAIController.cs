@@ -51,5 +51,57 @@ namespace InsureYou_AI.Controllers
 
             return View(model: imageUrl);
         }
+
+        [HttpGet]
+        public IActionResult CreateImageWithGemini()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateImageWithGemini(string prompt)
+        {
+            var apiKey = ""; // <- Gemini API Key
+            var model = "gemini-1.5-pro";
+            var url = $"https://generativelanguage.googleapis.com/v1/models/{model}:generateImage?key={apiKey}";
+
+            using var client = new HttpClient();
+
+            // JSON payload burada
+            var requestBody = new
+            {
+                prompt = prompt,
+                size = "512x512",
+                n = 1
+            };
+
+            var content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
+
+            var response = await client.PostAsync(url, content);
+            var json = await response.Content.ReadAsStringAsync();
+
+            if (!response.IsSuccessStatusCode)
+            {
+                ViewBag.error = "Gemini Hatası: " + json;
+                return View();
+            }
+
+            using var jsonDoc = JsonDocument.Parse(json);
+
+            // JSON'dan base64 veya URL al
+            var imageBase64 = jsonDoc.RootElement
+                                     .GetProperty("data")[0]
+                                     .GetProperty("b64_json")
+                                     .GetString();
+
+            if (string.IsNullOrEmpty(imageBase64))
+            {
+                ViewBag.error = "Görsel oluşturulamadı.";
+                return View();
+            }
+
+            var imageUrl = $"data:image/png;base64,{imageBase64}";
+            return View(model: imageUrl);
+        }
     }
 }

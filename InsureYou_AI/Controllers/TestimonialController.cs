@@ -2,6 +2,7 @@
 using InsureYou_AI.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Http.Headers;
+using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
@@ -114,5 +115,66 @@ namespace InsureYou_AI.Controllers
             ViewBag.testimonials = testimonials;
             return View();
         }
+
+
+        public async Task<IActionResult> CreateTestimonialsWithGemini()
+        {
+            var apiKey = ""; // <- Gemini API Key
+            var model = "gemini-1.5-pro"; // veya ihtiyacına göre başka model
+            var url = $"https://generativelanguage.googleapis.com/v1/models/{model}:generateContent?key={apiKey}";
+
+            string prompt = "Bir sigorta şirketi için müşteri deneyimlerine dair yorum oluşturmak istiyorum. Yani ingilizce karşılığı ile testimonial. Bu alanda Türkçe olarak 6 tane yorum, 6 tane müşteri adı ve soyadı, bu müşterilerin ünvanı olsun. Buna göre içeriği hazırla.";
+
+            using var client = new HttpClient();
+
+            var requestBody = new
+            {
+                contents = new[]
+                {
+            new
+            {
+                role = "user",
+                parts = new[]
+                {
+                    new { text = prompt }
+                }
+            }
+        }
+            };
+
+            var content = new StringContent(JsonSerializer.Serialize(requestBody), Encoding.UTF8, "application/json");
+
+            var response = await client.PostAsync(url, content);
+            var json = await response.Content.ReadAsStringAsync();
+
+            if (!response.IsSuccessStatusCode)
+            {
+                ViewBag.testimonials = new List<string>
+        {
+            $"Gemini API'den Cevap Alınamadı. Hata: {response.StatusCode}"
+        };
+                return View();
+            }
+
+            using var jsonDoc = JsonDocument.Parse(json);
+
+            // Metin çıktısını al
+            var fullText = jsonDoc.RootElement
+                                  .GetProperty("candidates")[0]
+                                 .GetProperty("content")
+                                 .GetProperty("parts")[0]
+                                 .GetProperty("text")
+                                 .GetString();
+
+            // Her satırı ayrı testimonial olarak ayır
+            var testimonials = fullText.Split('\n')
+                                       .Where(x => !string.IsNullOrEmpty(x))
+                                       .Select(x => x.TrimStart('1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '.', ' '))
+                                       .ToList();
+
+            ViewBag.testimonials = testimonials;
+            return View();
+        }
+
     }
 }
