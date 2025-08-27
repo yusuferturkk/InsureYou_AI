@@ -64,6 +64,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5MYXlvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/AppUser/UserCommentsProfileWithAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxVc2VyQ29tbWVudHNQcm9maWxlV2l0aEFJLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/AppUser/UserCommentsProfileWithGeminiAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxVc2VyQ29tbWVudHNQcm9maWxlV2l0aEdlbWluaUFJLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/AppUser/UserList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxVc2VyTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/AppUser/UserProfileWithAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxVc2VyUHJvZmlsZVdpdGhBSS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/AppUser/UserProfileWithGeminiAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwVXNlclxVc2VyUHJvZmlsZVdpdGhHZW1pbmlBSS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Article/ArticleList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWNsZVxBcnRpY2xlTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -102,6 +122,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Category/UpdateCategory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVXBkYXRlQ2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Chat/SendChatWithAI.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdFxTZW5kQ2hhdFdpdGhBSS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Yusuf/Documents/GitHub/InsureYou_AI/InsureYou_AI/Views/Comment/CommentList.cshtml]

@@ -24,7 +24,7 @@ namespace InsureYou_AI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateImageWithOpenAI(string prompt)
         {
-            var apiKey = "";
+            var apiKey = ""; // <- API Key Girişi
             var client = _httpClientFactory.CreateClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
 

@@ -62,7 +62,7 @@ namespace InsureYou_AI.Controllers
         [HttpGet]
         public async Task<IActionResult> CreateServiceWithGoogleGemini()
         {
-            var apiKey = "";
+            var apiKey = ""; // <- Gemini API Key Girişi
             var model = "gemini-1.5-pro";
             var url = $"https://generativelanguage.googleapis.com/v1/models/{model}:generateContent?key={apiKey}";
             var requestBody = new
@@ -107,7 +107,7 @@ namespace InsureYou_AI.Controllers
 
         public async Task<IActionResult> CreateServiceWithAnthropicClaude()
         {
-            string apiKey = "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";
+            string apiKey = ""; // <- Anthropic Claude API Key Girişi
 
             string prompt = "Bir sigorta şirketi için hizmetler bölümü hazırlamanı istiyorum. Burada 5 farklı hizmet başlığı ve açıklaması olmalı. Bana maksimum 100 karakterden oluşan cümlelerle 5 tane hizmet içeriği yazar mısın başlıkları ile birlikte?";
 

@@ -61,7 +61,7 @@ namespace InsureYou_AI.Controllers
         [HttpGet]
         public async Task<IActionResult> CreateAboutItemWithGoogleGemini()
         {
-            var apiKey = "";
+            var apiKey = ""; // <- API Key Girişi
             var model = "gemini-1.5-pro";
             var url = $"https://generativelanguage.googleapis.com/v1/models/{model}:generateContent?key={apiKey}";
             var requestBody = new

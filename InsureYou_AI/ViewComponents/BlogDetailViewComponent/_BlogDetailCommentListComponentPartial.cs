@@ -16,7 +16,7 @@ namespace InsureYou_AI.ViewComponents.BlogDetailViewComponent
         public IViewComponentResult Invoke(int id)
         {
             ViewBag.articleId = id;
-            var values = _context.Comments.Include(x => x.AppUser).Where(x => x.ArticleId == id).ToList();
+            var values = _context.Comments.Include(x => x.AppUser).Where(x => x.ArticleId == id && x.Status == "Yorum Onaylandı").ToList();
             return View(values);
         }
     }

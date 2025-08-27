@@ -29,12 +29,15 @@ namespace InsureYou_AI.Controllers
                 Surname = createUserRegisterDto.Surname,
                 UserName = createUserRegisterDto.Username,
                 Email = createUserRegisterDto.Email,
-                ImageUrl = "Test",
-                Description = "Açklama"
+                ImageUrl = "",
+                Description = "",
+                City = "",
+                Education = "",
+                Title = ""
             };
 
             await _userManager.CreateAsync(appUser, createUserRegisterDto.Password);
-            return RedirectToAction("UserList");
+            return RedirectToAction("UserList", "AppUser");
         }
     }
 }

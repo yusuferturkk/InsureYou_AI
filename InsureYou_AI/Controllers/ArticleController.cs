@@ -66,7 +66,7 @@ namespace InsureYou_AI.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateArticleWithOpenAI(string prompt)
         {
-            var apiKey = "";
+            var apiKey = ""; // <- API Key Girişi
 
             using var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
