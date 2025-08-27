@@ -8,7 +8,7 @@ namespace InsureYou_AI.Models
 {
     public class ChatHub : Hub
     {
-        private const string apiKey = "AIzaSyD6zszUqNrfPnTsmiJWqL0WgeZed4PdA9Q";
+        private const string apiKey = ""; // <- API Key Girişi
         private const string modelGemini = "gemini-1.5-pro";
 
         private readonly IHttpClientFactory _httpClientFactory;
